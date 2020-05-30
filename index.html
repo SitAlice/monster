@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+
+		.boxs {
+			height: 100px;
+			width: 100px;
+			background-color: lightblue;
+			border: solid;
+			position: absolute;
+		}
+		.firstBox {
+			background-color: white;
+			background-image: url(monster.png);
+			background-size: 100% 100%;
+		}
+
+		.bg{
+			background-image: url(bg.gif);
+			background-size: 100% 100%;
+			height: 900px;
+			widows: 1900px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content bg">
+		<h4 style="margin-left: 20px; color: #a06ed8">Score: <span class="score" style="color: #a06ed8">150</span></h4>
+		<img src="dice.png" class="bt" style="width: 100px; margin-left: 20px">		
+		<div class="boxs firstBox" style="margin-left: 20px; color: #a06ed8">
+			<h4 style=" color: #a06ed8">finish</h4>
+		</div>
+		<div class="boxs" style="margin-left: 130px; color: #a06ed8">1</div>
+		<div class="boxs" style="margin-left: 240px; color: #a06ed8">2</div>
+		<div class="boxs" style="margin-left: 350px; color: #a06ed8">3</div>
+				
+		<div class="boxs" style="margin-left: 460px;background-color: pink; color: #a06ed8">4</div> 
+		<div class="boxs" style="margin-left: 570px; color: #a06ed8">5</div>
+		<div class="boxs" style="margin-left: 680px; color: #a06ed8">6</div>
+		<div class="boxs" style="margin-left: 790px; color: #a06ed8">7</div>
+
+		<div class="boxs" style="margin-left: 900px; color: #a06ed8">8</div>
+		<div class="boxs" style="margin-left: 1010px; color: #a06ed8">9</div>
+		<div class="boxs" style="margin-left: 1120px;background-color: pink; color: #a06ed8">10
+			<p>иди назад на -5 клеток</p>
+		</div>
+		<div class="boxs" style="margin-left: 1230px; color: #a06ed8">11</div>
+
+		<div class="boxs" style="margin-left: 1340px; color: #a06ed8">12</div>
+		<div class="boxs" style="margin-left: 1340px; margin-top: 110px; color: #a06ed8">13</div>
+		<div class="boxs" style="margin-left: 1340px; margin-top: 220px; color: #a06ed8">14</div>	
+		<div class="boxs" style="margin-left: 1340px; margin-top: 330px;background-color: pink; color: #a06ed8">15</div>		
+
+		<div class="boxs" style="margin-left: 1340px; margin-top: 440px; color: #a06ed8">16</div>
+		<div class="boxs" style="margin-left: 1230px; margin-top: 440px; color: #a06ed8">17</div>
+		<div class="boxs" style="margin-left: 1120px; margin-top: 440px; color: #a06ed8">18</div>
+		<div class="boxs" style="margin-left: 1010px; margin-top: 440px; color: #a06ed8">19</div>
+
+		<div class="boxs" style="margin-left: 900px; margin-top: 440px; color: #a06ed8">20</div>
+		<div class="boxs" style="margin-left: 790px; margin-top: 440px; color: #a06ed8">21</div>
+		<div class="boxs" style="margin-left: 680px; margin-top: 440px; color: #a06ed8">22</div>
+		<div class="boxs" style="margin-left: 570px; margin-top: 440px; color: #a06ed8">23</div>
+
+		<div class="boxs" style="margin-left: 460px; margin-top: 440px;background-color: pink; color: #a06ed8">24</div>
+		<div class="boxs" style="margin-left: 350px; margin-top: 440px; color: #a06ed8">25</div>
+		<div class="boxs" style="margin-left: 240px; margin-top: 440px; color: #a06ed8">26</div>
+		<div class="boxs" style="margin-left: 130px; margin-top: 440px; color: #a06ed8">27</div>
+
+		<div class="boxs" style="margin-left: 20px; margin-top: 440px; color: #a06ed8">28</div>
+		<div class="boxs" style="margin-left: 20px; margin-top: 330px; color: #a06ed8">29</div>
+		<div class="boxs" style="margin-left: 20px; margin-top: 220px;background-color: pink; color: #a06ed8">30</div>	
+		<div class="boxs" style="margin-left: 20px; margin-top: 110px; color: #a06ed8">31</div>		
+
+		<!--последние дивы-->
+		<div class="boxs" style="margin-left: 130px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 240px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 350px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 460px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 570px; margin-top: 110px; background-color: green; opacity: 0"></div>
+		<div class="boxs" style="margin-left: 680px; margin-top: 110px; background-color: green; opacity: 0"></div>
+
+	</div>	
+
+
+	<script type="text/javascript">
+		let btn = document.querySelector(".bt");
+		let boxes = document.querySelectorAll(".boxs");
+		let fb = document.querySelector(".firstBox");
+		let scr = document.querySelector(".score");
+		let cont = document.querySelector(".content");
+		let b1 = document.querySelector(".box1");
+		let sc = 150;
+		let num = 0;
+
+
+		btn.onclick = function(){
+			let x= Math.random() * 6;
+			let n= Math.round(x);
+			
+			boxes[0].style.backgroundImage = "none";
+			if (n == 1|| n == 2 || n == 3 || n == 5|| n == 6|| n == 7|| n == 8||n == 9 || n == 11|| n == 12|| n == 13|| n == 14|| n == 16|| n == 17|| n == 18|| n == 19|| n == 20|| n == 21|| n==22 || n==23|| n==25|| n==26|| n==27|| n==28|| n==29|| n==31) {
+				boxes[num].style.backgroundImage = "none";
+				num= num + n;
+				alert("иди на" + " " + n + " " + "шагов на клетку" + " " + num);
+				boxes[num].style.backgroundImage = "url(monster.png)";
+				boxes[num].style.backgroundSize = "100% 100%";
+				sc = sc + 10;
+				scr.innerHTML = sc;
+			}
+			if (num == 4|| num == 15|| num == 24|| num == 30 ) {
+				boxes[num].style.backgroundImage = "none";
+				alert("иди на 1 клетку назад");
+				num = num - 1;
+				boxes[num].style.backgroundImage = "url(monster.png)";
+				boxes[num].style.backgroundSize = "100% 100%";
+				sc = sc - 30;
+				scr.innerHTML = sc;
+			}
+			if (num == 10) {
+				num= num - 5;
+				alert("иди на 5 клетку ");
+				boxes[10].style.backgroundImage = "none" ;
+				boxes[5].style.backgroundImage = "url(monster.png)";
+				boxes[5].style.backgroundSize = "100% 100%";
+			}
+
+			if (num > 31) {
+				alert("YOU WIN!!!!!!")
+				cont.style.display = "none";
+			}
+		}
+
+
+
+	</script>
+		
+</body>
+</html>
+
+
+
